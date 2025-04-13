@@ -20,17 +20,19 @@ pip install mistralai
 
 ## 使用方法
 
-1. 获取 Mistral AI API 密钥
-2. 修改 `pdf_ocr.py` 中的 API 密钥和 PDF 文件路径
-3. 运行脚本处理 PDF 文件
+1. 获取 Mistral AI API 密钥，并在项目根目录创建一个 `.env` 文件，内容例如：
+   ```
+   MISTRAL_API_KEY=your_mistral_api_key
+   ```
+2. 指定 PDF 文件路径作为命令行参数运行脚本，可选地使用 `--api-key` 参数覆盖 `.env` 中的 API 密钥。
+3. 在终端中运行脚本处理 PDF 文件
 
-```python
-# 在 pdf_ocr.py 中设置
-API_KEY = "your_mistral_api_key"
-PDF_PATH = "your_pdf_file.pdf"
+```bash
+# 在项目根目录创建一个 .env 文件, 内容如下:
+MISTRAL_API_KEY=your_mistral_api_key
 
-# 然后运行脚本
-python pdf_ocr.py
+# 然后运行脚本，传入 PDF 文件路径作为命令行参数
+python pdf_ocr.py your_pdf_file.pdf
 ```
 
 ## 输出结果
